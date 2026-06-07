@@ -24,10 +24,8 @@
           </h1>
           <p class="profile_title">Senior Engineer</p>
           <p class="description profile_description">
-            I am currently with Samsung Research Bangalore as a Speech Researcher (Senior Engineer, AI and ML), 
-			teaching computers to understand human speech. I have a Masters degree in Computer science and Engineering from Indian Institute of Technology, Kanpur, where I 
-			worked with Dr.Urbi Chatterjee on Physical Unclonable Functions(PUFs), providing a light-weight security solution to UAVs.
-			I am active in sports (Swimming to be specific), and you will find me enjoying my free time reading books or else playing my uke.
+            I'm a Speech Researcher and Senior Engineer in AI & ML at Samsung Research Bangalore, where I work on teaching computers to understand human speech. I earned my Master's degree in Computer Science and Engineering from IIT Kanpur, and my interests lie at the intersection of speech technology, machine learning, and artificial intelligence.
+			I am active in sports (Swimming to be specific), and you will find me enjoying my free time researching about new techs or else playing my uke.
           </p>
           <a class="downloadBtn" href="./cv.pdf" download="Resume.pdf">Download Resume</a>
         </div>
@@ -37,52 +35,52 @@
       <div class="skills">
         <h3 class="title">Expertise</h3>
         <ul class="skills_list description">
-          <li>Machine Learning</li>
           <li>Speech Recognition</li>
-          <li>Generative AI</li>
+		  <li>Generative AI</li>
+		  <li>Deep Learning</li>
+		  <li>Machine Learning</li>
           <li>LLMs</li>
         </ul>
       </div>
       <div class="ref">
-        <h3 class="title">Projects</h3>
+        <h3 class="title">Publications</h3>
         <div class="ref_item">
-          <h4 class="ref_name">Multilingual NMT featuring Llama</h4>
-          <p class="description">Finetuned Llama-2-7b-hf with <b>LoRA</b> for multilingual neural machine translations, for conversion of Hindi and Bengali to English. This project is
-		  currently ongoing and support for more languages are on the way. Future plan is to support conversion from Language X  to Language Y, instead of Language X to only English.
-		  <br>Check out this cool work at <a href="https://huggingface.co/datasets/hirak9398/dataset_hi_en_nmt_exp/tree/main"><u style="color:teal;"> HuggingFace</u></a> </p>
+          <h4 class="ref_name">
+    Probing LoRA-to-LoRA Cross-Lingual Transfer for Unseen Low-Resource Conditions in Whisper-Based ASR
+    <span style="color: teal;">(Interspeech 2026)</span>
+</h4>
+<p class="authors">
+    <strong>Hirak Mondal</strong>, Spandan Dey, Gopal Agrawal
+</p>
+          <p class="description">Low-resource Automatic Speech Recognition (ASR) remains a challenge despite large-scale pretraining, especially for languages with minimal representation. We investigate LoRA-to-LoRA transfer using Whisper, where a Low-Rank Adaptation (LoRA) module trained on a donor language, even one under-represented in the base model, initializes adaptation for a low-resource recipient. Unlike full fine-tuning, this approach preserves pretrained parameters, ensuring stable, parameter-efficient cross-lingual transfer. We propose a two-stage donor selection strategy that filters candidates by genealogical relatedness and identifies the optimal donor through orthographic-distributional similarity. Results demonstrate that donor-informed initialization consistently outperforms recipient-only adaptation, yielding relative Word Error Rate (WER) reductions of up to <b>17%</b>. Our findings indicate that leveraging linguistically and orthographically aligned donors is critical for effective low-resource ASR.
+		  </p>
         </div>
         <div class="ref_item">
-          <h4 class="ref_name">Named Entity Correction using G2P Techniques</h4>
-          <p class="description"> Named Entity Recognition is one of the most challenging task for an ASR system. This research focuses on finding effecient solution for Named Entity
-		  correction using Grapheme to Phoneme (G2P) techniques. This new method achieved accuracy at per with existing SOTA techniques. </p>
+          <h4 class="ref_name">Teacher-Free Knowledge Distillation for Improving Short-Utterance Spoken Language Identification
+		  <span style="color: teal;">(Interspeech 2025)</span>
+		  </h4>
+		  <p class="authors">
+    Spandan Dey, <strong>Hirak Mondal</strong>, Sanjay Kumar Kurmi
+</p>
+          <p class="description"> Spoken language identification (LID) systems exhibit performance degradations as the test input duration reduces. To delve deeper, we show that 36.94% of the misclassifications on 2-second (s) LID inputs occur due to out-of-scope elements like non-speech, named entities, filler words, and overlapped speech. To mitigate this, we propose a teacher-free knowledge distillation (TF-KD) using online label smoothing. This method accumulates prediction logits of correctly classified training segments from the preceding epoch and uses them as soft-labels for distillation in the next epoch. We further enhance TF-KD with dynamic weights, conditional label update, and entropy-based soft-label computation. Compared to existing KD-based solutions for 2s inputs, our approach achieves consistent Cavg improvements for both same-corpora and cross-corpora evaluations without training a separate teacher network. </p>
         </div>
         <div class="ref_item">
-          <h4 class="ref_name">Speech-to-Speech Translation using Fairseq</h4>
-          <p class="description"> Instead of taking an cascaded approach where first Language X is converted to text in source language, then that
-            text being translated to target language using NMT, and from there to speech in the target language, in this project we explore 
-          how to directly convert source speech to target speech. The project is based on Fairseq module devoloped by META. 
-         We have explored this project on French to English data having an BLEU score of 27 and Hindi to English data having an 
-         BLEU score of 30. Future plan is to improve the BLEU score and to support other languages. </p>
+          <h4 class="ref_name">Rethinking Organization Entity Modeling in End-to-End Acoustic Named Entity Recognition
+		  <span style="color: teal;">(Interspeech 2026)</span>
+		  </h4>
+		  <p class="authors">
+    Spandan Dey, <strong>Hirak Mondal</strong>, et.al.
+</p>
+          <p class="description"> End-to-end acoustic named entity recognition (NER) integrates speech transcription and entity detection within a unified model, avoiding error propagation in cascaded ASR-NER systems. However, organization entities remain significantly harder to detect due to multi-word spans, acronyms, and lexical variability. We present a systematic analysis of organization recognition failures in acoustic NER, revealing that conventional cross-entropy training inadequately models entity span dependencies. To address this limitation, we propose an organization-aware Whisper-based acoustic NER framework combining LLM-based targeted semantic augmentation, category-specific boundary supervision, and a structure-constrained entity learning (SCEL) objective that enforces entity span consistency during decoding. Experiments demonstrate substantial improvements in organization recognition while maintaining strong ASR performance, outperforming in entity-recognition for several other existing approaches.</p>
         </div>
-      </div>
-
-      <div class="edu">
-        <h3 class="title">Education</h3>
-        <div class="edu_item">
-          <p class="item_preTitle">2020-2022</p>
-          <h4 class="item_title">M.Tech in CSE</h4>
-          <p class="item_subtitle">
-            Indian Institute of Technology, Kanpur
-			<br>CGPA- 8.29
-          </p>
-        </div>
-        <div class="edu_item">
-          <p class="item_preTitle">2016-2020</p>
-          <h4 class="item_title">B.Tech in CSE</h4>
-          <p class="item_subtitle">
-            University of Engineering and Management, Kolkata
-			<br>CGPA- 9.17
-          </p>
+		<div class="ref_item">
+          <h4 class="ref_name">Spoken Language Diarization using Source-Domain Aggregative Weakly-Supervised Language Labels
+		  <span style="color: teal;">(SPCOM 2026)</span>
+		  </h4>
+		  <p class="authors">
+    Spandan Dey, <strong>Hirak Mondal</strong>, et.al. 
+</p>
+          <p class="description"> Spoken language diarization (SLD) detects homogeneous language segments in utterances containing code-switching or code-mixing. Although SLD is influenced by speaker diarization (SD), unlike speaker labels, language labels belong to a finite and defined set, enabling more structured modeling. Leveraging this, we propose to improve SLD by developing a domain-specific spoken language identification (LID) front-end directly from source-domain development data, where only RTTM annotations are available. Focusing on Track-2 of the DISPLACE 2024 challenge, we introduce an aggregative RTTM to pseudo-language label mapping (ARPM) framework using the Whisper-large-v3 model. ARPM generates weakly supervised language labels by aggregating language change tags from RTTM ground-truths, filtering them with duration and entropy-based criteria, and then refining the labels using pivot language based refinement. The resulting LID model produces more reliable domain-specific language-aware representations for subsequent diarization stages. The proposed approach achieves a <b>4.58%</b> absolute improvement in diarization error rate (DER) over the baseline. Despite using only 20 hours of development data and a standalone framework, we achieve competitive performance with top-performing submissions to the challenge, leveraging thousands of hours of training data and system fusion.</p>
         </div>
       </div>
 
@@ -96,11 +94,30 @@
           <h4 class="item_title">Samsung Research Institute, Bangalore</h4>
           <p class="item_subtitle">Senior Engineer</p>
           <p class=" description">
-            Galaxy AI team:  ML model development of On-Device ASR models for S23 and S24 flagship devices.<br><br>
+            Galaxy AI team:  ML model development of On-Device ASR models for S23,S24,S25 and S26 flagship devices.<br><br>
 			Achieving an overall <b>improvement of around 20% </b> on Most Widely Use Cases (MWUC) utterances.<br><br> 
 			Speech to Speech research and commercialization activities involving model training and improvement.<br><br>
-			Named Entity Recognition and Correction for present ASR models achieving <b>30% NER improvements.</b> <br><br>
 			Large Language Model(LLM) finetuning and training.<br>
+          </p>
+        </div>
+      </div>
+	  
+	  <div class="edu">
+        <h3 class="title">Education</h3>
+        <div class="edu_item">
+          <p class="item_preTitle">2020-2022</p>
+          <h4 class="item_title">M.Tech in CSE</h4>
+          <p class="item_subtitle">
+            <strong>Indian Institute of Technology, Kanpur </strong>
+			<br>CGPA- 8.29
+          </p>
+        </div>
+        <div class="edu_item">
+          <p class="item_preTitle">2016-2020</p>
+          <h4 class="item_title">B.Tech in CSE</h4>
+          <p class="item_subtitle">
+            University of Engineering and Management, Kolkata
+			<br>CGPA- 9.17
           </p>
         </div>
       </div>
@@ -111,9 +128,9 @@
           <p class="item_preTitle">2022-Present</p>
           <h4 class="item_title">Samsung Research Institute,Bangalore</h4>
           <p class=" description">
-            - Samsung Project Incentive Award (Oct, 2024) for enGB commercialization acitvity in Samsung Fold and Flip<br><br>
-            - Samsung Excellence Award (Dec,2023) for enGB commercialization in S24 <br><br>
-            - Samsung 6E Award (Dec,2022) for overall performance <br>
+            - Samsung Project Incentive Award for enGB commercialization acitvity in Samsung Fold and Flip<br><br>
+            - Samsung Excellence Award for enGB commercialization in Samsung flagship devices <br><br>
+            - Samsung 6E Award for overall performance <br>
           </p>
         </div>
         <div class="awards_item">
